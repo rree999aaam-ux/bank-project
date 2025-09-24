@@ -1,0 +1,13 @@
+id,first_name,last_name,password,checking,savings,active,overdraft_count
+10001,William,Hartnell,4fg56,100.00,0.00,True,0
+10002,Patrick,Troughton,serf,60.00,230.00,True,1
+10003,Jon,Pertwee,233!,-65.00,250.00,False,2
+10004,Tom,Baker,ee,0.00,0.00,True,0
+10005,Peter,Davison,werf345,58.00,0.00,False,4
+10006,Suresh,Sigera,wergt,63.00,0.00,False,3
+10007,James,Taylor,#@FG,-10.00,0.00,False,2
+10008,Melvin,Gordon,GD4dS,-35.00,2567.00,True,1
+10009,Stacey,Abrams,!fiuenrg,0.00,3452345.00,True,1
+100010,Jake,Paul,wegtr,10000.00,-10.00,True,0
+100011,rtg,drg,2435365,5000.00,0.00,True,0
+100012,Devlin,Booth,123456,0.00,0.00,True,0
