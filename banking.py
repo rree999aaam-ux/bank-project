@@ -271,47 +271,47 @@ if __name__ == "__main__":
             cid = input("Customer ID: ")
             pwd = input("Password: ")
             if bank.login(cid, pwd):
-                print("✅ Login successful.")
+                print("Login successful.")
             else:
-                print("❌ Login failed.")
+                print("Login failed.")
 
         elif choice == "2":
             bank.add_customer()
 
         elif choice == "3":
             if not bank.current_user:
-                print("⚠️ Please login first.")
+                print("Please login first.")
             else:
                 acct = input("Account (checking/savings): ")
                 amt  = float(input("Amount: "))
                 bank.deposit(bank.current_user.id, acct, amt)
                 bank.save_customers()
-                print("✅ Deposit complete.")
+                print("Deposit complete.")
 
         elif choice == "4":
             if not bank.current_user:
-                print("⚠️ Please login first.")
+                print("Please login first.")
             else:
                 acct = input("Account (checking/savings): ")
                 amt  = float(input("Amount: "))
                 bank.withdraw(bank.current_user.id, acct, amt)
                 bank.save_customers()
-                print("✅ Withdrawal complete.")
+                print("Withdrawal complete.")
 
         elif choice == "5":
             if not bank.current_user:
-                print("⚠️ Please login first.")
+                print("Please login first.")
             else:
                 to_cid = input("Destination customer ID: ")
                 acct   = input("Destination account (checking/savings): ")
                 amt    = float(input("Amount: "))
                 bank.transfer_to_other(bank.current_user.id, "checking", to_cid, acct, amt)
                 bank.save_customers()
-                print("✅ Transfer complete.")
+                print("Transfer complete.")
 
         elif choice == "6":
             bank.logout()
-            print("✅ Logged out.")
+            print("Logged out.")
 
         elif choice == "7":
             print("Goodbye!")
