@@ -26,3 +26,31 @@
 {'ts': '2025-09-24T09:51:55', 'type': 'transfer_self', 'cid': '10002', 'from': 'checking', 'to': 'savings', 'amount': 10.0}
 {'ts': '2025-09-24T09:51:55', 'type': 'auth', 'action': 'logout', 'cid': '10002'}
 {'ts': '2025-09-24T09:51:55', 'type': 'system', 'action': 'save_customers', 'count': 12}
+{'ts': '2025-09-24T13:17:05', 'type': 'system', 'action': 'load_customers', 'count': 12}
+{'ts': '2025-09-24T13:17:05', 'type': 'auth', 'action': 'login', 'cid': '10002'}
+{'ts': '2025-09-24T13:17:05', 'type': 'deposit', 'cid': '10002', 'acct': 'checking', 'amount': 50.0, 'before': 60.0, 'after': 110.0, 'overdraft_count': 1, 'active': True}
+{'ts': '2025-09-24T13:17:05', 'type': 'withdraw', 'cid': '10002', 'acct': 'checking', 'amount': 20.0, 'before': 110.0, 'after': 90.0, 'overdraft_count': 1, 'active': True}
+{'ts': '2025-09-24T13:17:05', 'type': 'withdraw', 'cid': '10002', 'acct': 'checking', 'amount': 10.0, 'before': 90.0, 'after': 80.0, 'overdraft_count': 1, 'active': True}
+{'ts': '2025-09-24T13:17:05', 'type': 'deposit', 'cid': '10002', 'acct': 'savings', 'amount': 10.0, 'before': 230.0, 'after': 240.0, 'overdraft_count': 1, 'active': True}
+{'ts': '2025-09-24T13:17:05', 'type': 'transfer_self', 'cid': '10002', 'from': 'checking', 'to': 'savings', 'amount': 10.0}
+{'ts': '2025-09-24T13:17:05', 'type': 'auth', 'action': 'logout', 'cid': '10002'}
+{'ts': '2025-09-24T13:17:05', 'type': 'system', 'action': 'save_customers', 'count': 12}
+{'ts': '2025-09-24T13:18:58', 'type': 'system', 'action': 'load_customers', 'count': 12}
+{'ts': '2025-09-24T13:20:18', 'type': 'auth', 'action': 'login', 'cid': '10002'}
+{'ts': '2025-09-24T13:20:36', 'type': 'auth', 'action': 'login', 'cid': '10002'}
+{'ts': '2025-09-24T13:20:36', 'type': 'deposit', 'cid': '10002', 'acct': 'checking', 'amount': 50.0, 'before': 80.0, 'after': 130.0, 'overdraft_count': 1, 'active': True}
+{'ts': '2025-09-24T13:20:36', 'type': 'withdraw', 'cid': '10002', 'acct': 'checking', 'amount': 20.0, 'before': 130.0, 'after': 110.0, 'overdraft_count': 1, 'active': True}
+{'ts': '2025-09-24T13:20:36', 'type': 'withdraw', 'cid': '10002', 'acct': 'checking', 'amount': 10.0, 'before': 110.0, 'after': 100.0, 'overdraft_count': 1, 'active': True}
+{'ts': '2025-09-24T13:20:36', 'type': 'deposit', 'cid': '10002', 'acct': 'savings', 'amount': 10.0, 'before': 240.0, 'after': 250.0, 'overdraft_count': 1, 'active': True}
+{'ts': '2025-09-24T13:20:36', 'type': 'transfer_self', 'cid': '10002', 'from': 'checking', 'to': 'savings', 'amount': 10.0}
+{'ts': '2025-09-24T13:20:36', 'type': 'auth', 'action': 'logout', 'cid': '10002'}
+{'ts': '2025-09-24T13:20:36', 'type': 'system', 'action': 'save_customers', 'count': 12}
+{'ts': '2025-09-24T13:28:02', 'type': 'system', 'action': 'load_customers', 'count': 12}
+{'ts': '2025-09-24T13:28:17', 'type': 'auth', 'action': 'login', 'cid': '10002'}
+{'ts': '2025-09-24T13:28:17', 'type': 'deposit', 'cid': '10002', 'acct': 'checking', 'amount': 50.0, 'before': 100.0, 'after': 150.0, 'overdraft_count': 1, 'active': True}
+{'ts': '2025-09-24T13:28:17', 'type': 'withdraw', 'cid': '10002', 'acct': 'checking', 'amount': 20.0, 'before': 150.0, 'after': 130.0, 'overdraft_count': 1, 'active': True}
+{'ts': '2025-09-24T13:28:17', 'type': 'withdraw', 'cid': '10002', 'acct': 'checking', 'amount': 10.0, 'before': 130.0, 'after': 120.0, 'overdraft_count': 1, 'active': True}
+{'ts': '2025-09-24T13:28:17', 'type': 'deposit', 'cid': '10002', 'acct': 'savings', 'amount': 10.0, 'before': 250.0, 'after': 260.0, 'overdraft_count': 1, 'active': True}
+{'ts': '2025-09-24T13:28:17', 'type': 'transfer_self', 'cid': '10002', 'from': 'checking', 'to': 'savings', 'amount': 10.0}
+{'ts': '2025-09-24T13:28:17', 'type': 'auth', 'action': 'logout', 'cid': '10002'}
+{'ts': '2025-09-24T13:28:17', 'type': 'system', 'action': 'save_customers', 'count': 12}

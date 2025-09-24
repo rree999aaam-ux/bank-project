@@ -83,6 +83,22 @@ class Bank:
         self.current_user: Customer | None = None
         self.tx_log: list[dict] = []
 
+    def add_customer(self):
+        print("\n=== Add New Customer ===")
+        cid = input("Enter new customer ID: ").strip()
+        if cid in self.customers:
+            print("⚠️ ID already exists.")
+            return
+        first = input("First name: ").strip()
+        last  = input("Last name: ").strip()
+        password = input("Password: ").strip()
+
+        cust = Customer(cid, first, last, password, active=True, overdraft_count=0)
+        self.customers[cid] = cust
+        self.save_customers()
+        print(f"✅ Customer {first} {last} added successfully.")
+
+
   
     def _log(self, kind, detail: dict):
         row = {
@@ -243,10 +259,66 @@ class Bank:
 
 
 if __name__ == "__main__":
-    print("Program is running...")
+    print("=== Welcome to the Bank ===")
     bank = Bank("Pybank.csv")
     bank.load_customers()
-    print("Loaded customers:", len(bank.customers))
+
+    while True:
+        print("\n1) Login  2) Add Customer  3) Deposit  4) Withdraw  5) Transfer  6) Logout  7) Exit")
+        choice = input("Choose an option: ").strip()
+
+        if choice == "1":
+            cid = input("Customer ID: ")
+            pwd = input("Password: ")
+            if bank.login(cid, pwd):
+                print("✅ Login successful.")
+            else:
+                print("❌ Login failed.")
+
+        elif choice == "2":
+            bank.add_customer()
+
+        elif choice == "3":
+            if not bank.current_user:
+                print("⚠️ Please login first.")
+            else:
+                acct = input("Account (checking/savings): ")
+                amt  = float(input("Amount: "))
+                bank.deposit(bank.current_user.id, acct, amt)
+                bank.save_customers()
+                print("✅ Deposit complete.")
+
+        elif choice == "4":
+            if not bank.current_user:
+                print("⚠️ Please login first.")
+            else:
+                acct = input("Account (checking/savings): ")
+                amt  = float(input("Amount: "))
+                bank.withdraw(bank.current_user.id, acct, amt)
+                bank.save_customers()
+                print("✅ Withdrawal complete.")
+
+        elif choice == "5":
+            if not bank.current_user:
+                print("⚠️ Please login first.")
+            else:
+                to_cid = input("Destination customer ID: ")
+                acct   = input("Destination account (checking/savings): ")
+                amt    = float(input("Amount: "))
+                bank.transfer_to_other(bank.current_user.id, "checking", to_cid, acct, amt)
+                bank.save_customers()
+                print("✅ Transfer complete.")
+
+        elif choice == "6":
+            bank.logout()
+            print("✅ Logged out.")
+
+        elif choice == "7":
+            print("Goodbye!")
+            break
+
+        else:
+            print("Invalid option, please try again.")
 
     if bank.login("10002", "serf"):
         bank.deposit("10002", "checking", 50)
